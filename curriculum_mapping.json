@@ -1,0 +1,1107 @@
+{
+  "oct": {
+    "month_name": "October 2026",
+    "topic": "Arrays + Sorting + Binary Search",
+    "weeks": {
+      "week-1": {
+        "date_range": "Oct 1 - Oct 7",
+        "days": {
+          "01-oct": {
+            "day_number": 1,
+            "day_of_week": "Thu",
+            "topic": "Array traversal + hashmap lookup",
+            "dont_reach_for": "Counter, list(set(...)). Build the dict yourself with one pass.",
+            "problems": [
+              "Two Sum",
+              "Contains Duplicate",
+              "Single Number"
+            ]
+          },
+          "02-oct": {
+            "day_number": 2,
+            "day_of_week": "Fri",
+            "topic": "Array scan \u2014 min/max/reverse",
+            "dont_reach_for": "max(), min(), nums.reverse(), nums[::-1]. Write the loop yourself.",
+            "problems": [
+              "Find Max in Array",
+              "Second Largest Element in Array",
+              "Reverse Array"
+            ]
+          },
+          "03-oct": {
+            "day_number": 3,
+            "day_of_week": "Sat",
+            "topic": "Hashmap counting",
+            "dont_reach_for": "Counter, Counter.most_common(). Use a plain dict with manual increment.",
+            "problems": [
+              "Majority Element",
+              "First Non-Repeating Element in Array",
+              "Count Frequencies of Array Elements"
+            ]
+          },
+          "04-oct": {
+            "day_number": 4,
+            "day_of_week": "Sun",
+            "topic": "Running state in one pass",
+            "dont_reach_for": "itertools.accumulate(), max() across slices.",
+            "problems": [
+              "Running Sum of 1d Array",
+              "Max Consecutive Ones",
+              "Best Time to Buy and Sell Stock"
+            ]
+          },
+          "05-oct": {
+            "day_number": 5,
+            "day_of_week": "Mon",
+            "topic": "Set membership + missing",
+            "dont_reach_for": "set operations (& | -). Walk the arrays manually.",
+            "problems": [
+              "Intersection of Two Arrays",
+              "Missing Number",
+              "Find All Numbers Disappeared in an Array"
+            ]
+          },
+          "06-oct": {
+            "day_number": 6,
+            "day_of_week": "Tue",
+            "topic": "Prefix sum basics",
+            "dont_reach_for": "itertools.accumulate(). Build the prefix array with a loop.",
+            "problems": [
+              "Running Sum of 1d Array",
+              "Find Pivot Index",
+              "Range Sum Query - Immutable"
+            ]
+          },
+          "07-oct": {
+            "day_number": 7,
+            "day_of_week": "Wed",
+            "topic": "Array rotation",
+            "dont_reach_for": "nums[k:] + nums[:k] slice trick. Rotate in-place with three reverses.",
+            "problems": [
+              "Rotate Array",
+              "Rotate Array by K Steps (in-place)",
+              "Reverse Array in Groups"
+            ]
+          }
+        }
+      },
+      "week-2": {
+        "date_range": "Oct 8 - Oct 14",
+        "days": {
+          "08-oct": {
+            "day_number": 8,
+            "day_of_week": "Thu",
+            "topic": "Two pointers from ends",
+            "dont_reach_for": "s == s[::-1]. Write the two-pointer walk.",
+            "problems": [
+              "Valid Palindrome",
+              "Reverse String",
+              "Reverse Vowels of a String"
+            ]
+          },
+          "09-oct": {
+            "day_number": 9,
+            "day_of_week": "Fri",
+            "topic": "Two pointers same direction (read + write)",
+            "dont_reach_for": "list(set(nums)), filter(). The lesson is the in-place read-write idiom.",
+            "problems": [
+              "Move Zeroes",
+              "Remove Duplicates from Sorted Array",
+              "Remove Element"
+            ]
+          },
+          "10-oct": {
+            "day_number": 10,
+            "day_of_week": "Sat",
+            "topic": "Two pointers from both ends (merge)",
+            "dont_reach_for": "sorted(nums1 + nums2). Merge from the back in-place.",
+            "problems": [
+              "Merge Sorted Array",
+              "Squares of a Sorted Array",
+              "Sort Array By Parity"
+            ]
+          },
+          "11-oct": {
+            "day_number": 11,
+            "day_of_week": "Sun",
+            "topic": "Fixed-size sliding window",
+            "dont_reach_for": "sum(nums[i:i+k]) inside the loop (O(n*k)). Keep a running sum.",
+            "problems": [
+              "Maximum Average Subarray I",
+              "Max Sum Subarray of Size K",
+              "Mean of Array After Removing Some Elements"
+            ]
+          },
+          "12-oct": {
+            "day_number": 12,
+            "day_of_week": "Mon",
+            "topic": "Variable-size sliding window",
+            "dont_reach_for": "sum() on slices. Shrink the window with a pointer.",
+            "problems": [
+              "Minimum Size Subarray Sum",
+              "Longest Subarray with Sum K",
+              "Fruit Into Baskets"
+            ]
+          },
+          "13-oct": {
+            "day_number": 13,
+            "day_of_week": "Tue",
+            "topic": "Sliding window + hashmap",
+            "dont_reach_for": "Counter inside loop. Maintain the window dict incrementally.",
+            "problems": [
+              "Contains Duplicate II",
+              "Find All Anagrams in a String",
+              "Permutation in String"
+            ]
+          },
+          "14-oct": {
+            "day_number": 14,
+            "day_of_week": "Wed",
+            "topic": "Window + condition tracking",
+            "dont_reach_for": "Counter inside loop. Track max-freq running variable.",
+            "problems": [
+              "Max Consecutive Ones III",
+              "Longest Repeating Character Replacement",
+              "Longest Substring Without Repeating Characters"
+            ]
+          }
+        }
+      },
+      "week-3": {
+        "date_range": "Oct 15 - Oct 21",
+        "days": {
+          "15-oct": {
+            "day_number": 15,
+            "day_of_week": "Thu",
+            "topic": "Bubble Sort (implement from scratch)",
+            "dont_reach_for": ".sort(), sorted(). You MUST implement bubble sort yourself with nested loops.",
+            "problems": [
+              "Bubble Sort",
+              "Bubble Sort with Early-Exit Optimization",
+              "Sort Array By Parity (using bubble)"
+            ]
+          },
+          "16-oct": {
+            "day_number": 16,
+            "day_of_week": "Fri",
+            "topic": "Selection Sort (implement from scratch)",
+            "dont_reach_for": ".sort(), sorted(), min(). Scan + swap by hand.",
+            "problems": [
+              "Selection Sort",
+              "Find K Smallest Elements (using selection)",
+              "Sort Characters By Frequency (manual)"
+            ]
+          },
+          "17-oct": {
+            "day_number": 17,
+            "day_of_week": "Sat",
+            "topic": "Insertion Sort (implement from scratch)",
+            "dont_reach_for": ".sort(), sorted(), bisect.insort(). Shift and insert by hand.",
+            "problems": [
+              "Insertion Sort",
+              "Insertion Sort on Nearly-Sorted Array",
+              "Sort Array with 3 Elements (0,1,2)"
+            ]
+          },
+          "18-oct": {
+            "day_number": 18,
+            "day_of_week": "Sun",
+            "topic": "Merge Sort (implement from scratch, recursive)",
+            "dont_reach_for": ".sort(), sorted(), heapq.merge(). Build the recursive split + merge.",
+            "problems": [
+              "Merge Sort",
+              "Merge Two Sorted Arrays (merge helper)",
+              "Count Inversions in Array"
+            ]
+          },
+          "19-oct": {
+            "day_number": 19,
+            "day_of_week": "Mon",
+            "topic": "Quick Sort (implement from scratch)",
+            "dont_reach_for": ".sort(), sorted(). Write both Lomuto and Hoare partition variants.",
+            "problems": [
+              "Quick Sort",
+              "Quick Sort with 3-way Partition",
+              "Kth Largest Element in Array (partition only)"
+            ]
+          },
+          "20-oct": {
+            "day_number": 20,
+            "day_of_week": "Tue",
+            "topic": "Counting Sort (implement from scratch)",
+            "dont_reach_for": ".sort(), sorted(), Counter. Build the count array manually.",
+            "problems": [
+              "Counting Sort",
+              "Sort Colors (Dutch flag, counting-style)",
+              "Sort an Array of 0s and 1s"
+            ]
+          },
+          "21-oct": {
+            "day_number": 21,
+            "day_of_week": "Wed",
+            "topic": "Sorting consolidation + Dutch flag",
+            "dont_reach_for": ".sort(). Use YOUR OWN sort functions from Days 15-20.",
+            "problems": [
+              "Sort Colors (3-way partition)",
+              "Wiggle Sort I",
+              "Sort Array by Increasing Frequency"
+            ]
+          }
+        }
+      },
+      "week-4": {
+        "date_range": "Oct 22 - Oct 28",
+        "days": {
+          "22-oct": {
+            "day_number": 22,
+            "day_of_week": "Thu",
+            "topic": "Classic binary search",
+            "dont_reach_for": "bisect, bisect_left, bisect_right. Write lo + (hi-lo)//2 by hand.",
+            "problems": [
+              "Binary Search",
+              "Search Insert Position",
+              "First Bad Version"
+            ]
+          },
+          "23-oct": {
+            "day_number": 23,
+            "day_of_week": "Fri",
+            "topic": "Binary search on answer",
+            "dont_reach_for": "bisect, math.isqrt(). Build the condition check inside your BS.",
+            "problems": [
+              "Sqrt(x)",
+              "Guess Number Higher or Lower",
+              "Valid Perfect Square"
+            ]
+          },
+          "24-oct": {
+            "day_number": 24,
+            "day_of_week": "Sat",
+            "topic": "Binary search variants (first + last occurrence)",
+            "dont_reach_for": "bisect_left, bisect_right. Build both variants yourself.",
+            "problems": [
+              "Find First and Last Position in Sorted Array",
+              "Count Occurrences of Element in Sorted Array",
+              "Floor and Ceiling in Sorted Array"
+            ]
+          },
+          "25-oct": {
+            "day_number": 25,
+            "day_of_week": "Sun",
+            "topic": "Binary search variants \u2014 Peak + Mountain",
+            "dont_reach_for": "bisect. Reason about which direction the slope rises.",
+            "problems": [
+              "Find Peak Element",
+              "Peak Index in a Mountain Array",
+              "Find in Mountain Array"
+            ]
+          },
+          "26-oct": {
+            "day_number": 26,
+            "day_of_week": "Mon",
+            "topic": "Binary search on rotated array",
+            "dont_reach_for": "bisect. Reason about which half is sorted.",
+            "problems": [
+              "Search in Rotated Sorted Array",
+              "Find Minimum in Rotated Sorted Array",
+              "Find Rotation Count in Sorted Array"
+            ]
+          },
+          "27-oct": {
+            "day_number": 27,
+            "day_of_week": "Tue",
+            "topic": "Binary search in 2D matrix",
+            "dont_reach_for": "numpy, flatten + bisect. Treat the matrix as 1D with index arithmetic.",
+            "problems": [
+              "Search a 2D Matrix",
+              "Row with Maximum Ones",
+              "Peak Element in 1D Array"
+            ]
+          },
+          "28-oct": {
+            "day_number": 28,
+            "day_of_week": "Wed",
+            "topic": "Binary search on condition (parametric search)",
+            "dont_reach_for": "bisect. Build the 'can we do it in X?' feasibility check.",
+            "problems": [
+              "Capacity to Ship Packages Within D Days",
+              "Koko Eating Bananas",
+              "Allocate Minimum Pages (GFG)"
+            ]
+          }
+        }
+      },
+      "week-5": {
+        "date_range": "Oct 29 - Oct 31",
+        "days": {
+          "29-oct": {
+            "day_number": 29,
+            "day_of_week": "Thu",
+            "topic": "Sort + merge intervals",
+            "dont_reach_for": ".sort() \u2014 use your own merge/quick sort from Week 3.",
+            "problems": [
+              "Merge Intervals",
+              "Insert Interval",
+              "Non-overlapping Intervals"
+            ]
+          },
+          "30-oct": {
+            "day_number": 30,
+            "day_of_week": "Fri",
+            "topic": "Sort + binary search combo",
+            "dont_reach_for": ".sort(), bisect. Use your own sort + your own BS.",
+            "problems": [
+              "Longest Consecutive Sequence",
+              "3Sum (sorted + two-pointer)",
+              "Two Sum II - Input Array Is Sorted"
+            ]
+          },
+          "31-oct": {
+            "day_number": 31,
+            "day_of_week": "Sat",
+            "topic": "PEN & PAPER TEST DAY \u26a1",
+            "dont_reach_for": "Test day \u2014 3 problems picked from Days 1-30 pool.",
+            "problems": [
+              "Pen & Paper Test Day - Problem 1",
+              "Pen & Paper Test Day - Problem 2",
+              "Pen & Paper Test Day - Problem 3"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "nov": {
+    "month_name": "November 2026",
+    "topic": "Strings \u2014 character counting, manipulation, pattern matching",
+    "weeks": {
+      "week-1": {
+        "date_range": "Nov 1 - Nov 7",
+        "days": {
+          "01-nov": {
+            "day_number": 1,
+            "day_of_week": "Sun",
+            "topic": "Length, concat, basic string ops",
+            "dont_reach_for": "len() on dynamically built string in a loop (O(n\u00b2) with +=). Build via list, join at end.",
+            "problems": [
+              "Length of Last Word",
+              "Longest Common Prefix",
+              "Count and Say"
+            ]
+          },
+          "02-nov": {
+            "day_number": 2,
+            "day_of_week": "Mon",
+            "topic": "Character transformation",
+            "dont_reach_for": "s.lower(), s.upper(), s.swapcase(). Walk the chars and ord-shift by hand.",
+            "problems": [
+              "To Lower Case",
+              "Capitalize the Title",
+              "Defanging an IP Address"
+            ]
+          },
+          "03-nov": {
+            "day_number": 3,
+            "day_of_week": "Tue",
+            "topic": "Character frequency counting (dict pattern)",
+            "dont_reach_for": "Counter, Counter.most_common(). Build the dict manually.",
+            "problems": [
+              "Valid Anagram",
+              "Group Anagrams",
+              "First Unique Character in a String"
+            ]
+          },
+          "04-nov": {
+            "day_number": 4,
+            "day_of_week": "Wed",
+            "topic": "Char counting advanced (two-string compare)",
+            "dont_reach_for": "Counter, Counter arithmetic. Two dicts, manual compare.",
+            "problems": [
+              "Ransom Note",
+              "Find Common Characters",
+              "Jewels and Stones"
+            ]
+          },
+          "05-nov": {
+            "day_number": 5,
+            "day_of_week": "Thu",
+            "topic": "Palindromes \u2014 two pointers from ends (echo of Oct Day 8)",
+            "dont_reach_for": "s == s[::-1]. Two-pointer walk.",
+            "problems": [
+              "Valid Palindrome",
+              "Palindrome Number",
+              "Count Palindromic Substrings"
+            ]
+          },
+          "06-nov": {
+            "day_number": 6,
+            "day_of_week": "Fri",
+            "topic": "Palindrome variants",
+            "dont_reach_for": "s[::-1], reversed(). Build your own reverse (same as Oct Day 9).",
+            "problems": [
+              "Valid Palindrome II (allow 1 deletion)",
+              "Longest Palindrome (count chars)",
+              "Palindrome Permutation"
+            ]
+          },
+          "07-nov": {
+            "day_number": 7,
+            "day_of_week": "Sat",
+            "topic": "Character classification",
+            "dont_reach_for": "ch.isalpha(), ch.isdigit() for the LOGIC \u2014 fine for the check. str.translate shortcuts banned.",
+            "problems": [
+              "Check if the Sentence Is Pangram",
+              "Number of Segments in a String",
+              "Count Vowels and Consonants"
+            ]
+          }
+        }
+      },
+      "week-2": {
+        "date_range": "Nov 8 - Nov 14",
+        "days": {
+          "08-nov": {
+            "day_number": 8,
+            "day_of_week": "Sun",
+            "topic": "Reverse operations (echo of Oct arrays reversal)",
+            "dont_reach_for": "s[::-1], reversed(), s.split()[::-1].",
+            "problems": [
+              "Reverse Words in a String",
+              "Reverse String II",
+              "Reverse Only Letters"
+            ]
+          },
+          "09-nov": {
+            "day_number": 9,
+            "day_of_week": "Mon",
+            "topic": "Reverse by chunks / per-word",
+            "dont_reach_for": "list comprehension with [::-1]. Build character-by-character.",
+            "problems": [
+              "Reverse Words in a String III",
+              "Reverse Prefix of Word",
+              "Reverse Vowels of a String"
+            ]
+          },
+          "10-nov": {
+            "day_number": 10,
+            "day_of_week": "Tue",
+            "topic": "Split, trim, rejoin",
+            "dont_reach_for": "s.split() with no args \u2014 fine. But build the loop version too, and compare.",
+            "problems": [
+              "Length of Last Word",
+              "Shortest Distance to a Character",
+              "Goal Parser Interpretation"
+            ]
+          },
+          "11-nov": {
+            "day_number": 11,
+            "day_of_week": "Wed",
+            "topic": "String rotation",
+            "dont_reach_for": "s in (s+s). Build the rotation check with modular index walk.",
+            "problems": [
+              "Rotate String",
+              "Shift 2D Grid (as string chars)",
+              "Rotate String by K"
+            ]
+          },
+          "12-nov": {
+            "day_number": 12,
+            "day_of_week": "Thu",
+            "topic": "String compression + encoding",
+            "dont_reach_for": "itertools.groupby(). Walk + count runs manually.",
+            "problems": [
+              "String Compression",
+              "Encode and Decode Strings (basic)",
+              "Count and Say"
+            ]
+          },
+          "13-nov": {
+            "day_number": 13,
+            "day_of_week": "Fri",
+            "topic": "Isomorphism (bijective dict pattern)",
+            "dont_reach_for": "zip + set tricks. Build two dicts explicitly.",
+            "problems": [
+              "Isomorphic Strings",
+              "Word Pattern",
+              "Find and Replace Pattern"
+            ]
+          },
+          "14-nov": {
+            "day_number": 14,
+            "day_of_week": "Sat",
+            "topic": "Common prefix/suffix",
+            "dont_reach_for": "os.path.commonprefix(), zip(*strs) tricks.",
+            "problems": [
+              "Longest Common Prefix",
+              "Longest Common Suffix",
+              "Check If Prefix of String"
+            ]
+          }
+        }
+      },
+      "week-3": {
+        "date_range": "Nov 15 - Nov 21",
+        "days": {
+          "15-nov": {
+            "day_number": 15,
+            "day_of_week": "Sun",
+            "topic": "Pattern matching (naive strStr)",
+            "dont_reach_for": "s.find(), s.index(), re.search(). Write the nested-loop match.",
+            "problems": [
+              "Find the Index of the First Occurrence (strStr)",
+              "Repeated Substring Pattern",
+              "Rotate String (via substring match)"
+            ]
+          },
+          "16-nov": {
+            "day_number": 16,
+            "day_of_week": "Mon",
+            "topic": "Sliding window on strings (echo of Oct Days 11-14)",
+            "dont_reach_for": "Counter inside loop. Maintain window freq dict incrementally.",
+            "problems": [
+              "Longest Substring Without Repeating Characters",
+              "Longest Repeating Character Replacement",
+              "Find All Anagrams in a String"
+            ]
+          },
+          "17-nov": {
+            "day_number": 17,
+            "day_of_week": "Tue",
+            "topic": "Prefix sum on strings (echo of Oct Day 6)",
+            "dont_reach_for": "itertools.accumulate(). Build the prefix count array yourself.",
+            "problems": [
+              "Number of Vowels in Substring Ranges (prefix-count)",
+              "Count Vowel Substrings of a String",
+              "Prefix Scores of Strings"
+            ]
+          },
+          "18-nov": {
+            "day_number": 18,
+            "day_of_week": "Wed",
+            "topic": "Sort on strings (uses YOUR OWN sort from Oct Week 3)",
+            "dont_reach_for": "sorted(), .sort(). Use your own merge/quick sort.",
+            "problems": [
+              "Sort Characters By Frequency",
+              "Reorganize String",
+              "Custom Sort String"
+            ]
+          },
+          "19-nov": {
+            "day_number": 19,
+            "day_of_week": "Thu",
+            "topic": "Binary search on strings (echo of Oct Week 4)",
+            "dont_reach_for": "bisect. Use your own BS from Oct Day 22.",
+            "problems": [
+              "Find Smallest Letter Greater Than Target",
+              "Longest Word in Dictionary Through Deleting",
+              "Lexicographic Smaller String Comparison"
+            ]
+          },
+          "20-nov": {
+            "day_number": 20,
+            "day_of_week": "Fri",
+            "topic": "Minimum window + target cover",
+            "dont_reach_for": "Counter arithmetic. Two dicts + matched-count variable.",
+            "problems": [
+              "Minimum Window Substring",
+              "Substrings of Size Three with Distinct Chars",
+              "Longest Nice Substring"
+            ]
+          },
+          "21-nov": {
+            "day_number": 21,
+            "day_of_week": "Sat",
+            "topic": "String + array hybrid",
+            "dont_reach_for": "list comp with heavy use of sorted().",
+            "problems": [
+              "Count Items Matching a Rule",
+              "Count Words in a String",
+              "Buddy Strings"
+            ]
+          }
+        }
+      },
+      "week-4": {
+        "date_range": "Nov 22 - Nov 28",
+        "days": {
+          "22-nov": {
+            "day_number": 22,
+            "day_of_week": "Sun",
+            "topic": "PEN & PAPER TEST DAY \u26a1",
+            "dont_reach_for": "Test day on 3 problems from Days 1-21.",
+            "problems": [
+              "Pen & Paper Test Day - Problem 1",
+              "Pen & Paper Test Day - Problem 2",
+              "Pen & Paper Test Day - Problem 3"
+            ]
+          },
+          "23-nov": {
+            "day_number": 23,
+            "day_of_week": "Mon",
+            "topic": "String comparison patterns",
+            "dont_reach_for": "'==' tricks and comprehensions. Walk char by char.",
+            "problems": [
+              "Determine if Two Strings Are Close",
+              "Minimum Changes to Make Alternating Binary String",
+              "Check If One String Swap Can Make Strings Equal"
+            ]
+          },
+          "24-nov": {
+            "day_number": 24,
+            "day_of_week": "Tue",
+            "topic": "Palindrome depth (expand around center)",
+            "dont_reach_for": "s[::-1] inside loop. Expand from center index.",
+            "problems": [
+              "Longest Palindromic Substring (expand around center)",
+              "Palindromic Substrings (count)",
+              "Shortest Palindrome (easy approach)"
+            ]
+          },
+          "25-nov": {
+            "day_number": 25,
+            "day_of_week": "Wed",
+            "topic": "Encoding + base conversion",
+            "dont_reach_for": "int(s, base), bin(), hex(). Build the arithmetic yourself.",
+            "problems": [
+              "Convert a Number to Hexadecimal",
+              "Add Binary",
+              "Add Strings (numeric strings)"
+            ]
+          },
+          "26-nov": {
+            "day_number": 26,
+            "day_of_week": "Thu",
+            "topic": "Groupby-style scanning",
+            "dont_reach_for": "itertools.groupby(). Walk and group by hand.",
+            "problems": [
+              "Longest Nice Substring",
+              "Count Substrings with Only One Distinct Letter",
+              "Max Consecutive Characters"
+            ]
+          },
+          "27-nov": {
+            "day_number": 27,
+            "day_of_week": "Fri",
+            "topic": "Char frequency + sort hybrid (uses your own sort)",
+            "dont_reach_for": "sorted(), Counter.most_common().",
+            "problems": [
+              "Sort Characters By Frequency",
+              "Rearrange Characters to Make Target String",
+              "Reorganize String"
+            ]
+          },
+          "28-nov": {
+            "day_number": 28,
+            "day_of_week": "Sat",
+            "topic": "String + binary search hybrid (uses your own BS)",
+            "dont_reach_for": "bisect, s.find().",
+            "problems": [
+              "Longest Word With All Prefixes Present",
+              "Check If a Word Occurs As Prefix of Any Word",
+              "Find Smallest String with K Vowels"
+            ]
+          }
+        }
+      },
+      "week-5": {
+        "date_range": "Nov 29 - Nov 30",
+        "days": {
+          "29-nov": {
+            "day_number": 29,
+            "day_of_week": "Sun",
+            "topic": "String review across all patterns",
+            "dont_reach_for": "any library imports from the Oct no-libraries list.",
+            "problems": [
+              "Choose from weakest string pattern \u00b7 1",
+              "Choose from weakest string pattern \u00b7 2",
+              "Choose from weakest string pattern \u00b7 3"
+            ]
+          },
+          "30-nov": {
+            "day_number": 30,
+            "day_of_week": "Mon",
+            "topic": "Preview \u2014 strings in Linked Lists (December bridge)",
+            "dont_reach_for": "any library imports.",
+            "problems": [
+              "Palindrome Linked List (preview)",
+              "Reverse String (one more time)",
+              "Compare Version Numbers"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "dec": {
+    "month_name": "December 2026",
+    "topic": "Linked Lists \u2014 Singly + Doubly + Circular",
+    "weeks": {
+      "week-1": {
+        "date_range": "Dec 1 - Dec 7",
+        "days": {
+          "01-dec": {
+            "day_number": 1,
+            "day_of_week": "Tue",
+            "topic": "Build a singly linked list (Node class + operations)",
+            "dont_reach_for": "collections.deque \u2014 the whole month is about building the LL yourself. Define class Node, class LinkedList by hand.",
+            "problems": [
+              "Design Singly Linked List",
+              "Count Nodes in a Linked List",
+              "Insert at Head of Linked List"
+            ]
+          },
+          "02-dec": {
+            "day_number": 2,
+            "day_of_week": "Wed",
+            "topic": "Traversal + reversal (echo of Oct array reverse)",
+            "dont_reach_for": "No library helpers. Pointer manipulation only.",
+            "problems": [
+              "Reverse Linked List",
+              "Reverse Linked List from M to N",
+              "Print Linked List in Reverse"
+            ]
+          },
+          "03-dec": {
+            "day_number": 3,
+            "day_of_week": "Thu",
+            "topic": "Fast + slow pointer (two-pointer echo of Oct Day 8-10)",
+            "dont_reach_for": "Converting to array first. Pointer walk only.",
+            "problems": [
+              "Middle of the Linked List",
+              "Nth Node from End of Linked List",
+              "Remove Nth Node from End of List"
+            ]
+          },
+          "04-dec": {
+            "day_number": 4,
+            "day_of_week": "Fri",
+            "topic": "Cycle detection (Floyd's tortoise + hare)",
+            "dont_reach_for": "A set of visited nodes \u2014 do it with O(1) space (two pointers).",
+            "problems": [
+              "Linked List Cycle",
+              "Linked List Cycle II (find start of cycle)",
+              "Happy Number (same pattern)"
+            ]
+          },
+          "05-dec": {
+            "day_number": 5,
+            "day_of_week": "Sat",
+            "topic": "Merge sorted lists (echo of Oct Day 10 merge)",
+            "dont_reach_for": "Converting to arrays first. In-place pointer re-wiring.",
+            "problems": [
+              "Merge Two Sorted Lists",
+              "Add Two Numbers (Linked List)",
+              "Add 1 to a Linked List Number"
+            ]
+          },
+          "06-dec": {
+            "day_number": 6,
+            "day_of_week": "Sun",
+            "topic": "Delete / remove nodes",
+            "dont_reach_for": "Any shortcut via list conversion.",
+            "problems": [
+              "Remove Duplicates from Sorted List",
+              "Remove Duplicates from Sorted List II (all occurrences)",
+              "Remove Linked List Elements (by value)"
+            ]
+          },
+          "07-dec": {
+            "day_number": 7,
+            "day_of_week": "Mon",
+            "topic": "Palindrome LL (echo of Nov Day 5)",
+            "dont_reach_for": "Converting to array and comparing. Do it in O(1) space via reverse-half.",
+            "problems": [
+              "Palindrome Linked List",
+              "Odd Even Linked List",
+              "Swap Nodes in Pairs"
+            ]
+          }
+        }
+      },
+      "week-2": {
+        "date_range": "Dec 8 - Dec 14",
+        "days": {
+          "08-dec": {
+            "day_number": 8,
+            "day_of_week": "Tue",
+            "topic": "Build a doubly linked list (Node with prev + next)",
+            "dont_reach_for": "collections.deque (even though a deque IS a DLL \u2014 you must build it).",
+            "problems": [
+              "Design Doubly Linked List",
+              "Insert at Head of DLL",
+              "Insert at Tail of DLL"
+            ]
+          },
+          "09-dec": {
+            "day_number": 9,
+            "day_of_week": "Wed",
+            "topic": "DLL traversal (bidirectional) + reverse",
+            "dont_reach_for": "Any shortcut via array.",
+            "problems": [
+              "Reverse a Doubly Linked List",
+              "Print DLL Forward and Backward",
+              "Delete Nth Node from End of DLL"
+            ]
+          },
+          "10-dec": {
+            "day_number": 10,
+            "day_of_week": "Thu",
+            "topic": "DLL insert / delete at position",
+            "dont_reach_for": "Any list conversion. Pointer re-wire with prev + next both.",
+            "problems": [
+              "Insert at Position in DLL",
+              "Delete at Position in DLL",
+              "Delete Node Given Only Its Pointer"
+            ]
+          },
+          "11-dec": {
+            "day_number": 11,
+            "day_of_week": "Fri",
+            "topic": "DLL two-pointer (echo of Oct Day 8 palindrome on arrays)",
+            "dont_reach_for": "No array conversion. Use head + tail pointers.",
+            "problems": [
+              "Palindrome Doubly Linked List",
+              "Find Pairs with Given Sum in Sorted DLL",
+              "Find Triplet with Given Sum in Sorted DLL"
+            ]
+          },
+          "12-dec": {
+            "day_number": 12,
+            "day_of_week": "Sat",
+            "topic": "LRU Cache design (classic DLL + hashmap)",
+            "dont_reach_for": "collections.OrderedDict (the shortcut). Build DLL + dict together.",
+            "problems": [
+              "Design LRU Cache",
+              "Move a Node to Front of DLL",
+              "Delete Last Node of DLL (O(1) with tail pointer)"
+            ]
+          },
+          "13-dec": {
+            "day_number": 13,
+            "day_of_week": "Sun",
+            "topic": "Advanced DLL operations",
+            "dont_reach_for": "Shortcuts via arrays or stacks.",
+            "problems": [
+              "Rotate a Doubly Linked List",
+              "Clone Doubly Linked List with Random Pointer",
+              "Reverse DLL in Groups of K"
+            ]
+          },
+          "14-dec": {
+            "day_number": 14,
+            "day_of_week": "Mon",
+            "topic": "Sort a DLL (uses YOUR OWN sort from Oct Week 3)",
+            "dont_reach_for": "sorted() on any array form.",
+            "problems": [
+              "Sort a Doubly Linked List (insertion sort)",
+              "Sort a Doubly Linked List (merge sort)",
+              "Flatten a Multilevel Doubly Linked List"
+            ]
+          }
+        }
+      },
+      "week-3": {
+        "date_range": "Dec 15 - Dec 21",
+        "days": {
+          "15-dec": {
+            "day_number": 15,
+            "day_of_week": "Tue",
+            "topic": "Build a circular linked list (last.next = head)",
+            "dont_reach_for": "Modular arithmetic on an array. Build real circular pointers.",
+            "problems": [
+              "Design Circular Linked List",
+              "Count Nodes in Circular LL",
+              "Insert into a Sorted Circular Linked List"
+            ]
+          },
+          "16-dec": {
+            "day_number": 16,
+            "day_of_week": "Wed",
+            "topic": "Circular LL operations",
+            "dont_reach_for": "Array simulation.",
+            "problems": [
+              "Delete Node in Circular Linked List",
+              "Split a Circular Linked List into Two Halves",
+              "Check if a Linked List is Circular"
+            ]
+          },
+          "17-dec": {
+            "day_number": 17,
+            "day_of_week": "Thu",
+            "topic": "Convert between forms (singly \u2194 circular)",
+            "dont_reach_for": "Array as intermediate.",
+            "problems": [
+              "Convert Singly Linked List to Circular",
+              "Convert Circular to Singly",
+              "Convert BST to Sorted Circular DLL"
+            ]
+          },
+          "18-dec": {
+            "day_number": 18,
+            "day_of_week": "Fri",
+            "topic": "Josephus problem (classic circular LL)",
+            "dont_reach_for": "deque, arrays. Walk the circular list and delete.",
+            "problems": [
+              "Josephus Problem (circular LL walk)",
+              "Find Last Person Standing",
+              "Elimination Game"
+            ]
+          },
+          "19-dec": {
+            "day_number": 19,
+            "day_of_week": "Sat",
+            "topic": "Circular LL + merge/sort (combines Oct + Dec patterns)",
+            "dont_reach_for": "sorted(). Use your own merge sort on circular LL.",
+            "problems": [
+              "Merge Two Sorted Circular Linked Lists",
+              "Sort a Circular Linked List",
+              "Reverse a Circular Linked List"
+            ]
+          },
+          "20-dec": {
+            "day_number": 20,
+            "day_of_week": "Sun",
+            "topic": "PEN & PAPER TEST DAY \u26a1",
+            "dont_reach_for": "Test day \u2014 3 problems picked from Days 1-19 pool.",
+            "problems": [
+              "Pen & Paper Test Day - Problem 1",
+              "Pen & Paper Test Day - Problem 2",
+              "Pen & Paper Test Day - Problem 3"
+            ]
+          },
+          "21-dec": {
+            "day_number": 21,
+            "day_of_week": "Mon",
+            "topic": "LL as alternate data structure (reinforce \u2014 queue uses LL)",
+            "dont_reach_for": "collections.deque. Implement queue USING a linked list.",
+            "problems": [
+              "Design a Queue using Linked List",
+              "Design a Stack using Linked List",
+              "Implement Browser History (DLL)"
+            ]
+          }
+        }
+      },
+      "week-4": {
+        "date_range": "Dec 22 - Dec 28",
+        "days": {
+          "22-dec": {
+            "day_number": 22,
+            "day_of_week": "Tue",
+            "topic": "Sort a singly linked list (echo of Oct Week 3)",
+            "dont_reach_for": "sorted(). Use your own merge sort / insertion sort on nodes.",
+            "problems": [
+              "Sort a Linked List (merge sort)",
+              "Insertion Sort List",
+              "Sort Linked List of 0s, 1s, and 2s"
+            ]
+          },
+          "23-dec": {
+            "day_number": 23,
+            "day_of_week": "Wed",
+            "topic": "Partition + rearrange nodes",
+            "dont_reach_for": "Array sort.",
+            "problems": [
+              "Partition List",
+              "Odd Even Linked List",
+              "Separate Even and Odd Nodes in a Linked List"
+            ]
+          },
+          "24-dec": {
+            "day_number": 24,
+            "day_of_week": "Thu",
+            "topic": "K-group manipulation",
+            "dont_reach_for": "Array conversion.",
+            "problems": [
+              "Reverse Nodes in K-Group",
+              "Rotate List by K",
+              "Reverse Alternate K Nodes"
+            ]
+          },
+          "25-dec": {
+            "day_number": 25,
+            "day_of_week": "Fri",
+            "topic": "Merge K sorted lists (pairwise merging, no heap)",
+            "dont_reach_for": "heapq.merge \u2014 we don't allow heaps. Pairwise merge two at a time.",
+            "problems": [
+              "Merge K Sorted Lists (pairwise)",
+              "Merge K Sorted DLLs",
+              "Flatten a Sorted Multilevel LL"
+            ]
+          },
+          "26-dec": {
+            "day_number": 26,
+            "day_of_week": "Sat",
+            "topic": "Review + cross-form sorting",
+            "dont_reach_for": "sorted().",
+            "problems": [
+              "Sort DLL by Absolute Value",
+              "Sort Circular LL in Ascending Order",
+              "Merge Sorted Singly + Sorted Doubly"
+            ]
+          },
+          "27-dec": {
+            "day_number": 27,
+            "day_of_week": "Sun",
+            "topic": "Cross-form conversions + clone with random pointer",
+            "dont_reach_for": "Array as scratch space. Pointer re-wiring only.",
+            "problems": [
+              "Flatten a Linked List (nested)",
+              "Clone Linked List with Random Pointer",
+              "Copy Doubly LL with Arbitrary Pointer"
+            ]
+          },
+          "28-dec": {
+            "day_number": 28,
+            "day_of_week": "Mon",
+            "topic": "Reverse variations (final round)",
+            "dont_reach_for": "any library.",
+            "problems": [
+              "Reverse Linked List from M to N",
+              "Reverse Alternate K Nodes",
+              "Reverse DLL in Groups of K"
+            ]
+          }
+        }
+      },
+      "week-5": {
+        "date_range": "Dec 29 - Dec 31",
+        "days": {
+          "29-dec": {
+            "day_number": 29,
+            "day_of_week": "Tue",
+            "topic": "Design problems (apply everything)",
+            "dont_reach_for": "OrderedDict, deque.",
+            "problems": [
+              "Design LRU Cache (full)",
+              "Design Browser History",
+              "Design Phone Directory using LL"
+            ]
+          },
+          "30-dec": {
+            "day_number": 30,
+            "day_of_week": "Wed",
+            "topic": "Full-circle review (arrays \u2192 strings \u2192 linked lists)",
+            "dont_reach_for": "any library.",
+            "problems": [
+              "Add Two Numbers (LL)",
+              "Compare Two Linked Lists",
+              "Copy LL with Random Pointer"
+            ]
+          },
+          "31-dec": {
+            "day_number": 31,
+            "day_of_week": "Thu",
+            "topic": "Choice day \u2014 pick 3 from any weakest LL concept",
+            "dont_reach_for": "any library imports.",
+            "problems": [
+              "Pick \u00b7 1",
+              "Pick \u00b7 2",
+              "Pick \u00b7 3"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
