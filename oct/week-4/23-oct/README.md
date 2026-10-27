@@ -29,6 +29,17 @@
 
 ---
 
+### Problem 3: Valid Perfect Square
+- **Solution File**: [`problem_3_valid_perfect_square.py`](./problem_3_valid_perfect_square.py)
+- **Approach**:
+  Search for an integer `m` in `[0, num]` whose square equals `num`. Compute `sq = m * m`: if `sq == num`, return `True`; if `sq < num`, the square is too small so move right (`l = m + 1`); otherwise move left (`h = m - 1`). If the search space exhausts without a match, return `False`.
+- **Time Complexity**: `O(log(num))`
+- **Space Complexity**: `O(1)`
+- **Edge Case Missed on First Attempt**:
+  Handling `num = 1` properly where `h = num = 1`, ensuring the binary search includes `1` in the valid search space without boundary exhaustion.
+
+---
+
 ## 💬 Discord Submission Command
 ```text
 /done day23 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/oct/week-4/23-oct/problem_1_sqrt_x.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/oct/week-4/23-oct/problem_2_guess_number_higher_or_lower.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/oct/week-4/23-oct/problem_3_valid_perfect_square.py

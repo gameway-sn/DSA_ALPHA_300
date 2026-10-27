@@ -52,7 +52,12 @@ def find_day(month=None, day=None, query=None):
             return find_day(month=month_found, day=day_found)
 
         # Method / problem aliases and normalization
-        q_alt = q[2:] if (q.startswith("my") and len(q) > 2) else q
+        prefixes = ("my", "is", "get", "find")
+        q_alt = q
+        for pfx in prefixes:
+            if q.startswith(pfx) and len(q) > len(pfx):
+                q_alt = q[len(pfx):]
+                break
 
         # Check by problem name
         for m_key, m_val in curriculum.items():
