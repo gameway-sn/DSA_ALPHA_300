@@ -51,12 +51,23 @@ def find_day(month=None, day=None, query=None):
             day_found, month_found = m.group(1), m.group(2)
             return find_day(month=month_found, day=day_found)
 
+        # Method / problem aliases and normalization
+        q_alt = q[2:] if (q.startswith("my") and len(q) > 2) else q
+
         # Check by problem name
         for m_key, m_val in curriculum.items():
             for w_key, w_val in m_val["weeks"].items():
                 for d_key, d_val in w_val["days"].items():
                     for idx, prob in enumerate(d_val["problems"]):
-                        if q in prob.lower():
+                        prob_clean = re.sub(r'[^a-z0-9]', '', prob.lower())
+                        q_clean = re.sub(r'[^a-z0-9]', '', q)
+                        q_alt_clean = re.sub(r'[^a-z0-9]', '', q_alt)
+                        if (q in prob.lower() or 
+                            q_alt in prob.lower() or 
+                            (q_clean and q_clean in prob_clean) or 
+                            (q_alt_clean and q_alt_clean in prob_clean) or
+                            (prob_clean and prob_clean in q_clean) or
+                            (prob_clean and prob_clean in q_alt_clean)):
                             return {
                                 "month": m_key,
                                 "week": w_key,
@@ -116,6 +127,12 @@ def save_solution(month, day, problem_num, code, approach="", time_comp="", spac
   {edge_case if edge_case else 'Handling boundary conditions, duplicates, or empty/single inputs.'}
 """
 
+    discord_links = []
+    for idx_p, p in enumerate(prob_list):
+        p_safe = sanitize_filename(p)
+        discord_links.append(f"https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/{match['month']}/{match['week']}/{match['day_folder']}/problem_{idx_p+1}_{p_safe}.py")
+    discord_cmd = f"/done day{info['day_number']} " + " ".join(discord_links)
+
     if not existing_content:
         header = f"""# Day {info['day_number']} · {match['day_folder']} ({info['day_of_week']})
 
@@ -127,12 +144,11 @@ def save_solution(month, day, problem_num, code, approach="", time_comp="", spac
 ## 📝 Problems & Solutions
 
 """
-        footer = f"""
----
+        footer = f"""---
 
 ## 💬 Discord Submission Command
 ```text
-/done day{info['day_number']} <github-link-to-problem-1> <github-link-to-problem-2> <github-link-to-problem-3>
+{discord_cmd}
 ```
 """
         final_readme = header + new_prob_section + "\n" + footer
@@ -144,9 +160,9 @@ def save_solution(month, day, problem_num, code, approach="", time_comp="", spac
         else:
             insert_pos = existing_content.find("---\n\n## 💬 Discord")
             if insert_pos != -1:
-                final_readme = existing_content[:insert_pos] + new_prob_section + "\n" + existing_content[insert_pos:]
+                final_readme = existing_content[:insert_pos] + new_prob_section + "\n---\n\n" + existing_content[insert_pos:]
             else:
-                final_readme = existing_content + "\n" + new_prob_section
+                final_readme = existing_content + "\n---\n\n" + new_prob_section
 
     with open(readme_path, "w", encoding="utf-8") as f:
         f.write(final_readme)
