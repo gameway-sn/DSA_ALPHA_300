@@ -29,8 +29,20 @@
 
 ---
 
+### Problem 3: Single Number
+- **Solution File**: [`problem_3_single_number.py`](./problem_3_single_number.py)
+- **Approach**:
+  Leverage XOR bitwise logic where `x ^ x = 0` and `x ^ 0 = x`. Iteratively XOR all elements together; duplicates cancel each other out, leaving only the unique element with `O(1)` auxiliary memory.
+- **Time Complexity**: `O(N)`
+- **Space Complexity**: `O(1)`
+- **Edge Case Missed on First Attempt**:
+  Single-element arrays `nums = [1]` where the loop runs once and returns `1`, and negative integers handled naturally by two's complement bitwise XOR.
+
+---
+
 ## 💬 Discord Submission Command
 ```text
 /done day1 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/oct/week-1/01-oct/problem_1_two_sum.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/oct/week-1/01-oct/problem_2_contains_duplicate.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/oct/week-1/01-oct/problem_3_single_number.py
 ```
+
 
