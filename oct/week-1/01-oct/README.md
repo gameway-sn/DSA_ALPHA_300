@@ -18,7 +18,19 @@
 
 ---
 
+### Problem 2: Contains Duplicate
+- **Solution File**: [`problem_2_contains_duplicate.py`](./problem_2_contains_duplicate.py)
+- **Approach**:
+  Build a frequency hash map by iterating over the array and counting occurrences of each element without using `collections.Counter`. Iterate through the frequency values and return `True` if any count exceeds 1, else `False`.
+- **Time Complexity**: `O(N)`
+- **Space Complexity**: `O(N)`
+- **Edge Case Missed on First Attempt**:
+  Single-element arrays (e.g. `[1]`), where no duplicates can exist, and negative numbers as keys.
+
+---
+
 ## 💬 Discord Submission Command
 ```text
 /done day1 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/oct/week-1/01-oct/problem_1_two_sum.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/oct/week-1/01-oct/problem_2_contains_duplicate.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/oct/week-1/01-oct/problem_3_single_number.py
 ```
+
