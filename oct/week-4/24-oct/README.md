@@ -18,6 +18,17 @@
 
 ---
 
+### Problem 2: Count Occurrences of Element in Sorted Array
+- **Solution File**: [`problem_2_count_occurrences_of_element_in_sorted_array.py`](./problem_2_count_occurrences_of_element_in_sorted_array.py)
+- **Approach**:
+  Run two binary searches across `arr`: the first binary search continues searching left (`h = m - 1`) upon finding `target` to locate its first occurrence (`start`), while the second continues searching right (`l = m + 1`) to locate its last occurrence (`end`). If `start == -1`, return `0`; otherwise return `abs(start - end) + 1`.
+- **Time Complexity**: `O(log N)`
+- **Space Complexity**: `O(1)`
+- **Edge Case Missed on First Attempt**:
+  Target not present in `arr` (correctly returning `0`), and single-occurrence elements where `start == end` yielding a frequency of `1`.
+
+---
+
 ## 💬 Discord Submission Command
 ```text
 /done day24 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/oct/week-4/24-oct/problem_1_find_first_and_last_position_in_sorted_array.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/oct/week-4/24-oct/problem_2_count_occurrences_of_element_in_sorted_array.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/oct/week-4/24-oct/problem_3_floor_and_ceiling_in_sorted_array.py
