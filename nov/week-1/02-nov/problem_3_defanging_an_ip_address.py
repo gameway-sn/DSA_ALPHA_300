@@ -13,3 +13,4 @@ class Solution(object):
                 r.append(c)
 
         return "".join(r)
+
