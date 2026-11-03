@@ -20,3 +20,4 @@ class Solution(object):
                 r = v
         
         return r if r != float('inf') else -1
+

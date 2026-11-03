@@ -29,6 +29,17 @@
 
 ---
 
+### Problem 3: Count and Say
+- **Solution File**: [`problem_3_count_and_say.py`](./problem_3_count_and_say.py)
+- **Approach**:
+  Initialize sequence at `w = "1"`. Iteratively generate the next term up to `n` by scanning consecutive characters and aggregating run counts into list `r` using `str(ct) + e`. Join the list at the end of each iteration to avoid $O(N^2)$ repeated string concatenation.
+- **Time Complexity**: $O(2^n)$ in worst-case string expansion (bounded by Conway's sequence growth).
+- **Space Complexity**: $O(M)$ where $M$ is the length of the string at step $n$.
+- **Edge Case Missed on First Attempt**:
+  Flushing the final run (`str(ct) + e`) after the character scan loop completes, and correctly returning `"1"` when `n = 1`.
+
+---
+
 ## 💬 Discord Submission Command
 ```text
 /done day1 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/01-nov/problem_1_length_of_last_word.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/01-nov/problem_2_longest_common_prefix.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/01-nov/problem_3_count_and_say.py
