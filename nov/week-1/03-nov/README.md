@@ -18,6 +18,17 @@
 
 ---
 
+### Problem 2: Group Anagrams
+- **Solution File**: [`problem_2_group_anagrams.py`](./problem_2_group_anagrams.py)
+- **Approach**:
+  Represent each string's character distribution with an immutable 26-element tuple derived from `ord(c) - 97` counts. Use this tuple as the hash map key to group the original indices of anagram words, and finally build the list of grouped string buckets.
+- **Time Complexity**: `O(N \cdot K)` where `N` is the number of strings and `K` is the maximum length of a string.
+- **Space Complexity**: `O(N \cdot K)` to store hash map buckets and output groups.
+- **Edge Case Missed on First Attempt**:
+  Empty strings `strs = [""]` yielding the zero tuple `(0, 0, ..., 0)` and single-character strings grouped accurately without key collisions.
+
+---
+
 ## 💬 Discord Submission Command
 ```text
 /done day3 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/03-nov/problem_1_valid_anagram.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/03-nov/problem_2_group_anagrams.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/03-nov/problem_3_first_unique_character_in_a_string.py

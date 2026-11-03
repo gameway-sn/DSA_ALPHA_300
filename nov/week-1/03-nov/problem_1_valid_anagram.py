@@ -14,3 +14,4 @@ class Solution(object):
             hmt[t[i]] = 1 + hmt.get(t[i], 0)
 
         return hmt == hms
+
