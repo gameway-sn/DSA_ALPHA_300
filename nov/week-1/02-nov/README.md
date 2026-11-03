@@ -18,6 +18,17 @@
 
 ---
 
+### Problem 2: Capitalize the Title
+- **Solution File**: [`problem_2_capitalize_the_title.py`](./problem_2_capitalize_the_title.py)
+- **Approach**:
+  Split `title` into words. For words of length $\le 2$, convert every character to lowercase using manual ASCII offset (`chr(cv + 32)` for `65 <= cv <= 90`). For words of length $> 2$, capitalize the initial character (`chr(cv - 32)` for `97 <= cv <= 122`) and lowercase the remaining characters. Join words with single spaces.
+- **Time Complexity**: `O(N)` where `N` is the length of `title`.
+- **Space Complexity**: `O(N)`
+- **Edge Case Missed on First Attempt**:
+  Words with 1 or 2 characters that start uppercase (e.g., `"OF"`, `"A"`, `"iN"`), which must be converted entirely to lowercase rather than capitalized.
+
+---
+
 ## 💬 Discord Submission Command
 ```text
 /done day2 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/02-nov/problem_1_to_lower_case.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/02-nov/problem_2_capitalize_the_title.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/02-nov/problem_3_defanging_an_ip_address.py
