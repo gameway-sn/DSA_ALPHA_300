@@ -108,8 +108,36 @@ def save_solution(month, day, problem_num, code, approach="", time_comp="", spac
             problem_name = f"Problem {p_num}"
 
     safe_name = sanitize_filename(problem_name)
-    code_filename = f"problem_{p_num}_{safe_name}.py"
-    code_filepath = os.path.join(target_dir, code_filename)
+    base_filename = f"problem_{p_num}_{safe_name}.py"
+    base_filepath = os.path.join(target_dir, base_filename)
+
+    version = 1
+    if os.path.exists(base_filepath):
+        with open(base_filepath, "r", encoding="utf-8") as f:
+            existing_code = f.read().strip()
+        if existing_code != code.strip():
+            v = 2
+            while True:
+                v_filename = f"problem_{p_num}_{safe_name}_v{v}.py"
+                v_filepath = os.path.join(target_dir, v_filename)
+                if not os.path.exists(v_filepath):
+                    version = v
+                    code_filename = v_filename
+                    code_filepath = v_filepath
+                    break
+                with open(v_filepath, "r", encoding="utf-8") as f:
+                    if f.read().strip() == code.strip():
+                        version = v
+                        code_filename = v_filename
+                        code_filepath = v_filepath
+                        break
+                v += 1
+        else:
+            code_filename = base_filename
+            code_filepath = base_filepath
+    else:
+        code_filename = base_filename
+        code_filepath = base_filepath
 
     with open(code_filepath, "w", encoding="utf-8") as f:
         f.write(code.strip() + "\n")
@@ -126,6 +154,16 @@ def save_solution(month, day, problem_num, code, approach="", time_comp="", spac
 - **Solution File**: [`{code_filename}`](./{code_filename})
 - **Approach**:
   {approach if approach else 'Direct implementation from primitives without library helpers.'}
+- **Time Complexity**: `{time_comp if time_comp else 'O(N)'}`
+- **Space Complexity**: `{space_comp if space_comp else 'O(1)'}`
+- **Edge Case Missed on First Attempt**:
+  {edge_case if edge_case else 'Handling boundary conditions, duplicates, or empty/single inputs.'}
+"""
+
+    alt_section = f"""#### Alternative Solution (v{version})
+- **Solution File**: [`{code_filename}`](./{code_filename})
+- **Approach**:
+  {approach if approach else 'Alternative implementation.'}
 - **Time Complexity**: `{time_comp if time_comp else 'O(N)'}`
 - **Space Complexity**: `{space_comp if space_comp else 'O(1)'}`
 - **Edge Case Missed on First Attempt**:
@@ -158,16 +196,26 @@ def save_solution(month, day, problem_num, code, approach="", time_comp="", spac
 """
         final_readme = header + new_prob_section + "\n" + footer
     else:
-        # Check if Problem section already exists
-        pattern = rf"(### Problem {p_num}:.*?)(?=### Problem|\Z|---\n\n## 💬 Discord)"
-        if re.search(pattern, existing_content, flags=re.DOTALL):
-            final_readme = re.sub(pattern, new_prob_section + "\n", existing_content, flags=re.DOTALL)
-        else:
-            insert_pos = existing_content.find("---\n\n## 💬 Discord")
-            if insert_pos != -1:
-                final_readme = existing_content[:insert_pos] + new_prob_section + "\n---\n\n" + existing_content[insert_pos:]
+        if version > 1:
+            # Append alternative section under the problem block
+            pattern = rf"(### Problem {p_num}:.*?)(?=(?:---|\Z|### Problem (?!{p_num}:)|## 💬 Discord))"
+            m = re.search(pattern, existing_content, flags=re.DOTALL)
+            if m:
+                matched_block = m.group(1).rstrip() + "\n\n" + alt_section + "\n"
+                final_readme = existing_content[:m.start(1)] + matched_block + existing_content[m.end(1):]
             else:
-                final_readme = existing_content + "\n---\n\n" + new_prob_section
+                final_readme = existing_content + "\n" + alt_section
+        else:
+            # Check if Problem section already exists
+            pattern = rf"(### Problem {p_num}:.*?)(?=### Problem|\Z|---\n\n## 💬 Discord)"
+            if re.search(pattern, existing_content, flags=re.DOTALL):
+                final_readme = re.sub(pattern, new_prob_section + "\n", existing_content, flags=re.DOTALL)
+            else:
+                insert_pos = existing_content.find("---\n\n## 💬 Discord")
+                if insert_pos != -1:
+                    final_readme = existing_content[:insert_pos] + new_prob_section + "\n---\n\n" + existing_content[insert_pos:]
+                else:
+                    final_readme = existing_content + "\n---\n\n" + new_prob_section
 
     with open(readme_path, "w", encoding="utf-8") as f:
         f.write(final_readme)

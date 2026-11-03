@@ -21,6 +21,9 @@ When the user pastes code into chat:
 2. **Save the Solution File(s)**:
    - Target Folder: `<month>/<week>/<month-date>/` (all lowercase with hyphens, e.g., `oct/week-4/22-oct/`).
    - File Naming: `problem_{problem_number}_{snake_case_name}.py` (e.g., `problem_1_binary_search.py`).
+   - **Resubmissions & Multiple Versions (CRITICAL)**:
+     - **NEVER overwrite an existing solution file** with a new solution.
+     - If `problem_{problem_number}_{snake_case_name}.py` already exists and the submitted code is different, save it as `problem_{problem_number}_{snake_case_name}_v2.py` (increment to `_v3.py`, `_v4.py`, etc., if prior versions exist).
    - Ensure the solution strictly follows the **No-Libraries Rule** (built from primitives; no `Counter`, `deque`, `bisect`, `heapq`, `itertools`, etc.).
 
 3. **Generate or Update the Daily `README.md`**:
@@ -30,6 +33,7 @@ When the user pastes code into chat:
    - **DON'T REACH FOR**: The forbidden library/shortcut rule for that day
    - **Per-Problem Breakdown**:
      - Problem name & clickable link to the `.py` file
+     - For resubmissions/new versions, append an `#### Alternative Solution (v{N})` sub-section with its link, approach, and complexities rather than replacing the original entry.
      - **Approach** (2–3 lines)
      - **Time Complexity** (e.g. `O(log N)` or `O(N)`)
      - **Space Complexity** (e.g. `O(1)`)
