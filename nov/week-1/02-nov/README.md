@@ -29,6 +29,17 @@
 
 ---
 
+### Problem 3: Defanging an IP Address
+- **Solution File**: [`problem_3_defanging_an_ip_address.py`](./problem_3_defanging_an_ip_address.py)
+- **Approach**:
+  Iterate over each character `c` of the IP string. Replace every occurrence of `.` with `[.]` by appending to an accumulator list, keeping octet digit characters unchanged, and join the result.
+- **Time Complexity**: `O(N)` where `N` is the length of the string.
+- **Space Complexity**: `O(N)`
+- **Edge Case Missed on First Attempt**:
+  Addresses with single-digit octets (e.g. `"0.0.0.0"`) or maximum length octets (`"255.255.255.255"`), handled consistently without string concatenation in a loop.
+
+---
+
 ## 💬 Discord Submission Command
 ```text
 /done day2 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/02-nov/problem_1_to_lower_case.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/02-nov/problem_2_capitalize_the_title.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/02-nov/problem_3_defanging_an_ip_address.py
