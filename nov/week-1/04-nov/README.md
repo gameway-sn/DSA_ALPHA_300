@@ -18,6 +18,17 @@
 
 ---
 
+### Problem 2: Find Common Characters
+- **Solution File**: [`problem_2_find_common_characters.py`](./problem_2_find_common_characters.py)
+- **Approach**:
+  Initialize a frequency map from the first word. For each subsequent word, count character frequencies in a temporary dictionary `ht` and update the base map by retaining the minimum common frequency (or removing absent keys). Expand each surviving character by its final count into the result list.
+- **Time Complexity**: `O(N \cdot L)` where `N` is the number of words and `L` is the average word length.
+- **Space Complexity**: `O(1)` auxiliary space (bounded by 26 English letters).
+- **Edge Case Missed on First Attempt**:
+  Characters present in earlier words but entirely absent in later words (which must be eliminated with frequency 0), and safe dictionary iteration without mutating dict size mid-loop.
+
+---
+
 ## 💬 Discord Submission Command
 ```text
 /done day4 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/04-nov/problem_1_ransom_note.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/04-nov/problem_2_find_common_characters.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/04-nov/problem_3_jewels_and_stones.py
