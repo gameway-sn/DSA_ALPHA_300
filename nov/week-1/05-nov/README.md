@@ -18,6 +18,17 @@
 
 ---
 
+### Problem 3: Count Palindromic Substrings
+- **Solution File**: [`problem_3_count_palindromic_substrings.py`](./problem_3_count_palindromic_substrings.py)
+- **Approach**:
+  Expand around each potential palindrome center using two pointers. For each index `i`, check odd-length palindromes starting at `(i, i)` and even-length palindromes starting at `(i, i + 1)`. Expand outward while characters match, incrementing the palindrome count without slicing or string reversals.
+- **Time Complexity**: `O(N^2)` where $N$ is the length of `s`.
+- **Space Complexity**: `O(1)` auxiliary space.
+- **Edge Case Missed on First Attempt**:
+  Handling both odd-length and even-length palindrome centers (e.g. `"aa"` having an even center between adjacent letters).
+
+---
+
 ## 💬 Discord Submission Command
 ```text
 /done day5 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/05-nov/problem_1_valid_palindrome.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/05-nov/problem_2_palindrome_number.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/05-nov/problem_3_count_palindromic_substrings.py

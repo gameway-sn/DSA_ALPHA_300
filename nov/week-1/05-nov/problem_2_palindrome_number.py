@@ -16,3 +16,4 @@ class Solution(object):
             x //= 10
 
         return original == rev
+
