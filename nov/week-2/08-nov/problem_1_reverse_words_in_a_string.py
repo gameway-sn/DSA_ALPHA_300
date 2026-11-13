@@ -6,3 +6,4 @@ class Solution:
             r.append(s[i])
         
         return " ".join(r)
+

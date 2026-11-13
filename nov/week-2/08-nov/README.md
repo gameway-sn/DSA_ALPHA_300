@@ -18,6 +18,17 @@
 
 ---
 
+### Problem 2: Reverse String II
+- **Solution File**: [`problem_2_reverse_string_ii.py`](./problem_2_reverse_string_ii.py)
+- **Approach**:
+  Process the string in steps of $2k$. In each step, reverse the first $k$ characters (`s[i:i+k]`) via helper `rev` and keep the subsequent $k$ characters (`s[i+k:i+2*k]`) intact. Join the accumulated chunks into the final string.
+- **Time Complexity**: `O(N)` where `N` is `len(s)`.
+- **Space Complexity**: `O(N)` to hold segment slices and final string.
+- **Edge Case Missed on First Attempt**:
+  Tail segments with fewer than $k$ characters remaining (which must be reversed in their entirety) or between $k$ and $2k$ characters remaining, naturally satisfied by slice boundary clipping.
+
+---
+
 ## 💬 Discord Submission Command
 ```text
 /done day8 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-2/08-nov/problem_1_reverse_words_in_a_string.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-2/08-nov/problem_2_reverse_string_ii.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-2/08-nov/problem_3_reverse_only_letters.py
