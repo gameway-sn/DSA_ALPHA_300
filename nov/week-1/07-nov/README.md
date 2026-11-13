@@ -18,6 +18,17 @@
 
 ---
 
+### Problem 2: Number of Segments in a String
+- **Solution File**: [`problem_2_number_of_segments_in_a_string.py`](./problem_2_number_of_segments_in_a_string.py)
+- **Approach**:
+  Iterate through the string maintaining a slice start index `st`. On encountering whitespace delimiter `s[i] == " "`, slice the substring `s[st:i]` and advance `st = i + 1`.
+- **Time Complexity**: `O(N)` where `N` is the length of string `s`.
+- **Space Complexity**: `O(N)` to hold segment slices.
+- **Edge Case Missed on First Attempt**:
+  Consecutive whitespace creating empty slices `""`, omitting the final trailing word segment, and returning `r` directly rather than the non-empty segment count `len([w for w in r if w])` or transition count `(i == 0 or s[i-1] == ' ') and s[i] != ' '`.
+
+---
+
 ## 💬 Discord Submission Command
 ```text
 /done day7 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/07-nov/problem_1_check_if_the_sentence_is_pangram.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/07-nov/problem_2_number_of_segments_in_a_string.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/07-nov/problem_3_count_vowels_and_consonants.py
