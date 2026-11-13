@@ -29,6 +29,17 @@
 
 ---
 
+### Problem 3: Reverse Only Letters
+- **Solution File**: [`problem_3_reverse_only_letters.py`](./problem_3_reverse_only_letters.py)
+- **Approach**:
+  Decompose string `s` into character list `r`. Use a two-pointer walk (`rev2`) starting from both ends `i = 0` and `j = len(l) - 1`. Non-alphabetic characters remain fixed in their original indices, while two pointers advance inward until both encounter alphabetic characters (`c.isalpha()`), swapping their positions before returning the joined string.
+- **Time Complexity**: `O(N)` where `N` is `len(s)`.
+- **Space Complexity**: `O(N)` for list manipulation and character arrays.
+- **Edge Case Missed on First Attempt**:
+  Strings without any letters (e.g. `"!@#$-_"` remaining unchanged) or with letters interspersed with complex symbols and dashes (`"a-bC-dEf-ghIj"`).
+
+---
+
 ## 💬 Discord Submission Command
 ```text
 /done day8 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-2/08-nov/problem_1_reverse_words_in_a_string.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-2/08-nov/problem_2_reverse_string_ii.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-2/08-nov/problem_3_reverse_only_letters.py

@@ -14,3 +14,4 @@ class Solution:
             i += 2 * k
 
         return "".join(r)
+
