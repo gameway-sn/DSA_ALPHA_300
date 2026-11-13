@@ -38,6 +38,15 @@
 - **Edge Case Missed on First Attempt**:
   Uppercase vowel characters (e.g. `"IceCreAm"`), handled by comparing `s[...].lower()` against the vowel set, and strings containing zero vowels.
 
+#### Alternative Solution (v2)
+- **Solution File**: [`problem_3_reverse_vowels_of_a_string_v2.py`](./problem_3_reverse_vowels_of_a_string_v2.py)
+- **Approach**:
+  Convert string `s` to a mutable list `temp = list(s)` and apply a standard in-place two-pointer traversal `(i < j)`. Advance pointers inward past non-vowel characters, perform simultaneous in-place swaps `temp[i], temp[j] = temp[j], temp[i]` whenever both pointers target vowels, and join the list.
+- **Time Complexity**: `O(N)` where `N` is the length of `s`.
+- **Space Complexity**: `O(N)` for the character list.
+- **Edge Case Missed on First Attempt**:
+  Single-pass in-place swapping without requiring a separate pre-filling pass for non-vowels.
+
 ---
 
 ## 💬 Discord Submission Command
