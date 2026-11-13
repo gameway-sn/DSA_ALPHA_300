@@ -29,6 +29,17 @@
 
 ---
 
+### Problem 3: Reverse Vowels of a String
+- **Solution File**: [`problem_3_reverse_vowels_of_a_string.py`](./problem_3_reverse_vowels_of_a_string.py)
+- **Approach**:
+  Define a vowel lookup set `{'a', 'e', 'i', 'o', 'u'}` and pre-fill non-vowel characters into an output array `temp`. Use two pointers `i = 0` and `j = len(s) - 1` advancing past consonants using `lower() in v`, swap opposing vowel pairs into `temp[i]` and `temp[j]`, and join the result.
+- **Time Complexity**: `O(N)` where `N` is the length of `s`.
+- **Space Complexity**: `O(N)` for the character buffer.
+- **Edge Case Missed on First Attempt**:
+  Uppercase vowel characters (e.g. `"IceCreAm"`), handled by comparing `s[...].lower()` against the vowel set, and strings containing zero vowels.
+
+---
+
 ## 💬 Discord Submission Command
 ```text
 /done day9 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-2/09-nov/problem_1_reverse_words_in_a_string_iii.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-2/09-nov/problem_2_reverse_prefix_of_word.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-2/09-nov/problem_3_reverse_vowels_of_a_string.py

@@ -17,3 +17,4 @@ class Solution:
         r.append(word[loc + 1:])
 
         return "".join(r)
+
