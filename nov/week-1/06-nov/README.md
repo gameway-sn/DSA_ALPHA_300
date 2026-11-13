@@ -38,6 +38,15 @@
 - **Edge Case Missed on First Attempt**:
   Strings with more than one odd-frequency character which cannot form any valid palindrome permutations, and deduplicating permutations when multi-count identical characters are permuted.
 
+#### Alternative Solution (v2)
+- **Solution File**: [`problem_3_palindrome_permutation_v2.py`](./problem_3_palindrome_permutation_v2.py)
+- **Approach**:
+  Extract character frequencies using `Counter` and build the prefix half-array. Immediately reject inputs with $> 1$ odd-frequency characters by returning `[]`. Generate deduplicated permutations of the half-array via `set(permutations(half))` and form full palindromes by sandwiching the odd character between the prefix and its reversed slice `left[::-1]`, returning the lexicographically sorted result list.
+- **Time Complexity**: $O(K! \cdot K + M \log M)$ where $K$ is the number of half-characters and $M$ is the number of unique palindromic permutations.
+- **Space Complexity**: $O(M \cdot N)$ where $N$ is `len(s)` and $M$ is the number of palindromes.
+- **Edge Case Missed on First Attempt**:
+  Early termination when `len(odd) > 1` (impossible to form any palindrome) and using `set` to eliminate duplicate permutations arising from repeated characters.
+
 ---
 
 ## 💬 Discord Submission Command
