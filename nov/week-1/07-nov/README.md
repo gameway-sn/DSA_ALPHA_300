@@ -38,6 +38,17 @@
 
 ---
 
+### Problem 3: Count Vowels and Consonants
+- **Solution File**: [`problem_3_count_vowels_and_consonants.py`](./problem_3_count_vowels_and_consonants.py)
+- **Approach**:
+  Maintain a vowel lookup set `{'a', 'e', 'i', 'o', 'u'}` and iterate through string `s`. Accumulate vowel occurrences in `vct` and consonant occurrences in `cct`. Return `1` if vowels strictly exceed consonants, `-1` if consonants strictly exceed vowels, or `0` if their counts match.
+- **Time Complexity**: `O(N)` where `N` is the length of `s`.
+- **Space Complexity**: `O(1)` auxiliary space.
+- **Edge Case Missed on First Attempt**:
+  Strings with equal frequencies of vowels and consonants returning `0`, and strings containing only vowels or only consonants.
+
+---
+
 ## 💬 Discord Submission Command
 ```text
 /done day7 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/07-nov/problem_1_check_if_the_sentence_is_pangram.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/07-nov/problem_2_number_of_segments_in_a_string.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/07-nov/problem_3_count_vowels_and_consonants.py
