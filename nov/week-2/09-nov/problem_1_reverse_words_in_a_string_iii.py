@@ -10,3 +10,4 @@ class Solution:
             r.append(rev(w))
         
         return " ".join(r)
+

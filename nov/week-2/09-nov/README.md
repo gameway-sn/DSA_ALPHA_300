@@ -18,6 +18,17 @@
 
 ---
 
+### Problem 2: Reverse Prefix of Word
+- **Solution File**: [`problem_2_reverse_prefix_of_word.py`](./problem_2_reverse_prefix_of_word.py)
+- **Approach**:
+  Locate the first occurrence of `ch` in `word`. Reverse the prefix slice up to and including that index (`word[:loc+1]`) using helper `rev` (`[::-1]`), concatenate the remaining suffix `word[loc+1:]`, and return the full word if `ch` is absent.
+- **Time Complexity**: `O(N)` where `N` is the length of `word`.
+- **Space Complexity**: `O(N)` for string slices.
+- **Edge Case Missed on First Attempt**:
+  Character `ch` not found in `word` (leaving string unchanged), or `ch` located at index 0 where the single-character prefix mirrors into itself.
+
+---
+
 ## 💬 Discord Submission Command
 ```text
 /done day9 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-2/09-nov/problem_1_reverse_words_in_a_string_iii.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-2/09-nov/problem_2_reverse_prefix_of_word.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-2/09-nov/problem_3_reverse_vowels_of_a_string.py
