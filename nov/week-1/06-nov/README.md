@@ -18,6 +18,17 @@
 
 ---
 
+### Problem 2: Longest Palindrome (count chars)
+- **Solution File**: [`problem_2_longest_palindrome_count_chars.py`](./problem_2_longest_palindrome_count_chars.py)
+- **Approach**:
+  Count character frequencies in `s` manually via a hash dictionary. Sum up all even counts and the even component (`v - 1`) of any odd counts. If any character appears an odd number of times, place one odd character at the center of the palindrome by adding 1 to the final length.
+- **Time Complexity**: `O(N)` where `N` is `len(s)`.
+- **Space Complexity**: `O(1)` auxiliary space (at most 52 English letters).
+- **Edge Case Missed on First Attempt**:
+  Strings where all characters have odd frequencies (e.g., `"aaaaa"` yielding full length 5, or all unique characters `"abc"` yielding length 1).
+
+---
+
 ## 💬 Discord Submission Command
 ```text
 /done day6 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/06-nov/problem_1_valid_palindrome_ii_allow_1_deletion.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/06-nov/problem_2_longest_palindrome_count_chars.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/06-nov/problem_3_palindrome_permutation.py
