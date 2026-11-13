@@ -29,6 +29,17 @@
 
 ---
 
+### Problem 3: Palindrome Permutation
+- **Solution File**: [`problem_3_palindrome_permutation.py`](./problem_3_palindrome_permutation.py)
+- **Approach**:
+  Extract character frequencies into hash map `hm`, partitioning characters into half-counts for the prefix and tracking odd central characters. Permute the prefix characters, attach the odd central character when present, and mirror the prefix using a custom manual two-pointer reversal function `mir` without using `[::-1]`.
+- **Time Complexity**: $O(K! \cdot K)$ where $K$ is the number of half-characters permuted.
+- **Space Complexity**: $O(K! \cdot K)$ to store permutations and mirrored outputs.
+- **Edge Case Missed on First Attempt**:
+  Strings with more than one odd-frequency character which cannot form any valid palindrome permutations, and deduplicating permutations when multi-count identical characters are permuted.
+
+---
+
 ## 💬 Discord Submission Command
 ```text
 /done day6 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/06-nov/problem_1_valid_palindrome_ii_allow_1_deletion.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/06-nov/problem_2_longest_palindrome_count_chars.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-1/06-nov/problem_3_palindrome_permutation.py

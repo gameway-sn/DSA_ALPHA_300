@@ -19,3 +19,4 @@ class Solution:
                 r += v - 1
         
         return r + 1 if odd else r
+
