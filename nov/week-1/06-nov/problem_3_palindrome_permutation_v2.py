@@ -36,3 +36,4 @@ class Solution:
             result.append(left + middle + right)
 
         return sorted(result)
+
