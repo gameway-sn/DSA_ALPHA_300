@@ -27,6 +27,15 @@
 - **Edge Case Missed on First Attempt**:
   Consecutive whitespace creating empty slices `""`, omitting the final trailing word segment, and returning `r` directly rather than the non-empty segment count `len([w for w in r if w])` or transition count `(i == 0 or s[i-1] == ' ') and s[i] != ' '`.
 
+#### Alternative Solution (v2)
+- **Solution File**: [`problem_2_number_of_segments_in_a_string_v2.py`](./problem_2_number_of_segments_in_a_string_v2.py)
+- **Approach**:
+  Single-pass character scan using a boolean state flag `prev` to track whether the previous character was part of a segment. Increment the count `r` only upon entering a new non-whitespace segment (`c != " " and not prev`), and reset `prev = False` whenever a space is met.
+- **Time Complexity**: `O(N)` where `N` is the length of `s`.
+- **Space Complexity**: `O(1)` auxiliary space.
+- **Edge Case Missed on First Attempt**:
+  Leading, multiple consecutive, and trailing whitespace cleanly handled without extra memory allocation or slice generation.
+
 ---
 
 ## 💬 Discord Submission Command
