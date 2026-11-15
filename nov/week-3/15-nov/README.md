@@ -38,6 +38,17 @@
 
 ---
 
+### Problem 3: Rotate String (via substring match)
+- **Solution File**: [`problem_3_rotate_string_via_substring_match.py`](./problem_3_rotate_string_via_substring_match.py)
+- **Approach**:
+  Verify length equality `len(s) == len(goal)`. Since any cyclic rotation of length $N$ is contained as a contiguous substring of `s + s`, perform substring inclusion `goal in s + s`.
+- **Time Complexity**: `O(N)` where `N` is the length of `s`.
+- **Space Complexity**: `O(N)` for the doubled string `s + s`.
+- **Edge Case Missed on First Attempt**:
+  Strings of unequal length returning `False` upfront before performing substring search.
+
+---
+
 ## 💬 Discord Submission Command
 ```text
 /done day15 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/15-nov/problem_1_find_the_index_of_the_first_occurrence_strstr.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/15-nov/problem_2_repeated_substring_pattern.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/15-nov/problem_3_rotate_string_via_substring_match.py
