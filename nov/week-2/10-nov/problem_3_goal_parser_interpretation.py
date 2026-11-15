@@ -12,3 +12,4 @@ class Solution:
 
             prev = c
         return "".join(r)
+
