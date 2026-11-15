@@ -27,6 +27,17 @@
 
 ---
 
+### Problem 2: Repeated Substring Pattern
+- **Solution File**: [`problem_2_repeated_substring_pattern.py`](./problem_2_repeated_substring_pattern.py)
+- **Approach**:
+  Concatenate `s` with itself to form `s + s` and strip the outermost boundaries `[1:-1]`. Check if `s` exists in the trimmed string; if `s` is periodic with a repeating unit, the periodic alignment guarantees `s` appears within the trimmed interior.
+- **Time Complexity**: `O(N)` where `N` is the length of `s`.
+- **Space Complexity**: `O(N)` to construct the doubled and sliced string.
+- **Edge Case Missed on First Attempt**:
+  Omitting the `[1:-1]` slice trimming causes any string to trivially match at index $0$ or index $N$.
+
+---
+
 ## 💬 Discord Submission Command
 ```text
 /done day15 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/15-nov/problem_1_find_the_index_of_the_first_occurrence_strstr.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/15-nov/problem_2_repeated_substring_pattern.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/15-nov/problem_3_rotate_string_via_substring_match.py
