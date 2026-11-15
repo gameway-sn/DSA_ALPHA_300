@@ -27,6 +27,15 @@
 - **Edge Case Missed on First Attempt**:
   Indices before the first occurrence of `c` and indices past the final occurrence of `c`, where only one boundary is within string limits.
 
+#### Alternative Solution (v2)
+- **Solution File**: [`problem_2_shortest_distance_to_a_character_v2.py`](./problem_2_shortest_distance_to_a_character_v2.py)
+- **Approach**:
+  Standard two-pass array scan. Pass 1 sweeps left-to-right recording distances from the most recent occurrence of `c` (`prev = float('-inf')`). Pass 2 sweeps right-to-left recording distances from the closest upcoming occurrence of `c` (`prev = float('inf')`), updating each position with `min(r[j], |j - prev|)`.
+- **Time Complexity**: `O(N)` where `N` is the length of `s`.
+- **Space Complexity**: `O(1)` auxiliary space (excluding output array `r`).
+- **Edge Case Missed on First Attempt**:
+  Positions occurring before the initial appearance of `c` cleanly resolve during the backwards pass.
+
 ---
 
 ## 💬 Discord Submission Command
