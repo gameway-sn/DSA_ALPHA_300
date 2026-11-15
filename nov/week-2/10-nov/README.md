@@ -38,6 +38,17 @@
 
 ---
 
+### Problem 3: Goal Parser Interpretation
+- **Solution File**: [`problem_3_goal_parser_interpretation.py`](./problem_3_goal_parser_interpretation.py)
+- **Approach**:
+  Single-pass loop tracking current and previous characters. Append `'G'` directly, map `()` to `'o'` when `prev == '('` and `c == ')'`, and map `(al)` to `'al'` when `prev == 'l'` and `c == ')'`. Assemble output with `"".join(r)`.
+- **Time Complexity**: `O(N)` where `N` is `len(command)`.
+- **Space Complexity**: `O(N)` for output tokens.
+- **Edge Case Missed on First Attempt**:
+  Distinguishing between empty parenthesis `()` and letter-enclosing parenthesis `(al)` based on the character immediately preceding the closing parenthesis.
+
+---
+
 ## 💬 Discord Submission Command
 ```text
 /done day10 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-2/10-nov/problem_1_length_of_last_word.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-2/10-nov/problem_2_shortest_distance_to_a_character.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-2/10-nov/problem_3_goal_parser_interpretation.py

@@ -16,3 +16,4 @@ class Solution:
             r[j] = min(r[j], abs(j - prev))
 
         return r
+
