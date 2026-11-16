@@ -18,3 +18,4 @@ class Solution:
             r = max(r, j - i + 1)
 
         return r
+

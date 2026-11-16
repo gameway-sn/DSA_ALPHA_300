@@ -38,6 +38,17 @@
 
 ---
 
+### Problem 3: Find All Anagrams in a String
+- **Solution File**: [`problem_3_find_all_anagrams_in_a_string.py`](./problem_3_find_all_anagrams_in_a_string.py)
+- **Approach**:
+  Build a frequency dict `forgoal` for pattern `p`. Slide a fixed window of size `n = len(p)` over `s` using `left` and `right` pointers, maintaining `forstring` incrementally — add `s[right]` on expansion, remove `s[left]` (deleting the key when it hits 0) when window exceeds `n`. Compare dicts each step; append `left` to result when equal.
+- **Time Complexity**: `O(N)` where `N = len(s)` — each character visited once; dict comparison is `O(1)` (bounded 26-char alphabet).
+- **Space Complexity**: `O(1)` auxiliary space (at most 26 lowercase English letters in each dict).
+- **Edge Case Missed on First Attempt**:
+  Deleting keys with zero count from `forstring` before comparing — without deletion, `forstring == forgoal` would fail even when frequencies match (extra zero-valued keys cause inequality).
+
+---
+
 ## 💬 Discord Submission Command
 ```text
 /done day16 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/16-nov/problem_1_longest_substring_without_repeating_characters.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/16-nov/problem_2_longest_repeating_character_replacement.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/16-nov/problem_3_find_all_anagrams_in_a_string.py
