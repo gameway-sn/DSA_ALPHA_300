@@ -19,3 +19,4 @@ class Solution:
             r = max(abs(i - j), r)
             j += 1
         return r
+

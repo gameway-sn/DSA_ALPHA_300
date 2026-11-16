@@ -27,6 +27,15 @@
 - **Edge Case Missed on First Attempt**:
   Calculating window length as `abs(i - j)` rather than `(j - i + 1)`, causing off-by-one window measurements and failing to record the final valid expansion on the trailing index.
 
+#### Alternative Solution (v2)
+- **Solution File**: [`problem_2_longest_repeating_character_replacement_v2.py`](./problem_2_longest_repeating_character_replacement_v2.py)
+- **Approach**:
+  Corrected sliding window with exact window span `(j - i + 1)`. Dynamically track character frequencies in hash map `h` and the maximum frequency `m`. Shrink window from the left while `(j - i + 1) - m > k`, maintaining optimal valid windows at each step.
+- **Time Complexity**: `O(N)` where `N` is `len(s)` (each character pushed and popped at most once).
+- **Space Complexity**: `O(1)` auxiliary space (bounded by 26 English uppercase characters).
+- **Edge Case Missed on First Attempt**:
+  Accurately measures window span with `j - i + 1` and properly evaluates the final index expansion.
+
 ---
 
 ## 💬 Discord Submission Command
