@@ -7,3 +7,4 @@ class Solution:
         if goal in s + s:
             return True
         return False
+
