@@ -18,6 +18,17 @@
 
 ---
 
+### Problem 2: Longest Repeating Character Replacement
+- **Solution File**: [`problem_2_longest_repeating_character_replacement.py`](./problem_2_longest_repeating_character_replacement.py)
+- **Approach**:
+  Sliding window maintaining character frequency counts in dictionary `h` and the highest single character frequency `m`. When the number of required replacements `(window_len - m)` exceeds `k`, decrement `h[s[i]]` and advance left pointer `i`. Otherwise, expand window at `j`, updating `m` and recording max window span `r`.
+- **Time Complexity**: `O(N)` where `N` is `len(s)`.
+- **Space Complexity**: `O(K)` auxiliary space (at most 26 uppercase English letters).
+- **Edge Case Missed on First Attempt**:
+  Calculating window length as `abs(i - j)` rather than `(j - i + 1)`, causing off-by-one window measurements and failing to record the final valid expansion on the trailing index.
+
+---
+
 ## 💬 Discord Submission Command
 ```text
 /done day16 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/16-nov/problem_1_longest_substring_without_repeating_characters.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/16-nov/problem_2_longest_repeating_character_replacement.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/16-nov/problem_3_find_all_anagrams_in_a_string.py
