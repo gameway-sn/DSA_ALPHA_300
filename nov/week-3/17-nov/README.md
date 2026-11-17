@@ -27,6 +27,7 @@
 - **Space Complexity**: `O(1)` (`seen` holds at most 5 vowels).
 - **Edge Case Missed on First Attempt**:
   None recorded. Substrings must be all vowels, so a consonant breaks the scan, and counting continues for every extension after all 5 vowels are seen.
+
 ---
 
 ### Problem 3: Prefix Scores of Strings
@@ -37,12 +38,14 @@
 - **Space Complexity**: `O(L)` for the trie nodes.
 - **Edge Case Missed on First Attempt**:
   None recorded. Duplicate words share the same path, so each one's score includes its own copies.
+
 ---
 
 ## 💬 Discord Submission Command
 ```text
 /done day17 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/17-nov/problem_1_maximum_number_of_vowels_in_a_substring_of_given_length.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/17-nov/problem_2_count_vowel_substrings_of_a_string.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/17-nov/problem_3_prefix_scores_of_strings.py
 ```
+
 
 
 
