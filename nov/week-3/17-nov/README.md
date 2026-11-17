@@ -30,11 +30,19 @@
 ---
 
 ### Problem 3: Prefix Scores of Strings
-- _Pending — not yet submitted._
-
+- **Solution File**: [`problem_3_prefix_scores_of_strings.py`](./problem_3_prefix_scores_of_strings.py)
+- **Approach**:
+  Build a trie where each node stores `count`, the number of words passing through it. Insert every word, incrementing `count` along its path. Then walk each word again and sum the `count` of every node on its path, which is the number of words sharing each prefix.
+- **Time Complexity**: `O(L)` where `L` is the total number of characters across all words.
+- **Space Complexity**: `O(L)` for the trie nodes.
+- **Edge Case Missed on First Attempt**:
+  None recorded. Duplicate words share the same path, so each one's score includes its own copies.
 ---
 
 ## 💬 Discord Submission Command
-_Pending — problems 1 and 3 still need to be submitted._
+```text
+/done day17 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/17-nov/problem_1_maximum_number_of_vowels_in_a_substring_of_given_length.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/17-nov/problem_2_count_vowel_substrings_of_a_string.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/17-nov/problem_3_prefix_scores_of_strings.py
+```
+
 
 
