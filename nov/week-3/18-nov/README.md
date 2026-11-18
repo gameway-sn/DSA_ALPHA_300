@@ -16,6 +16,15 @@
 - **Edge Case Missed on First Attempt**:
   None recorded. `max_finder` starts at `m = 0` and uses strict `>`, so ties are broken arbitrarily, which is valid for this problem.
 
+#### Alternative Solution (v2)
+- **Solution File**: [`problem_1_sort_characters_by_frequency_v2.py`](./problem_1_sort_characters_by_frequency_v2.py)
+- **Approach**:
+  Bucket sort by frequency. Count characters in a hash map, then place each character into bucket `b[count]` (buckets `0..len(s)`). Walk the buckets from highest count down to 1 and append `char * count` for every character in each bucket. No repeated max scans are needed.
+- **Time Complexity**: `O(N)` where `N = len(s)`.
+- **Space Complexity**: `O(N)` for the buckets and result.
+- **Edge Case Missed on First Attempt**:
+  None recorded. Buckets are sized `len(s) + 1` so a single repeated character (count `N`) fits, and the loop stops at 1 since no character has count 0.
+
 ---
 
 ## 💬 Discord Submission Command
