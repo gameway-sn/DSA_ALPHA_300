@@ -27,7 +27,18 @@
 
 ---
 
+### Problem 3: Custom Sort String
+- **Solution File**: [`problem_3_custom_sort_string.py`](./problem_3_custom_sort_string.py)
+- **Approach**:
+  Count the characters of `s` in a hash map. Walk `order` and, for each character present in the map, append it repeated by its count, then remove it from the map. Whatever is left in the map (characters not in `order`) is appended at the end in any order. No built-in sort is used.
+- **Time Complexity**: `O(N + M)` where `N = len(s)` and `M = len(order)`.
+- **Space Complexity**: `O(N)` for the result (plus `O(1)` for the map, bounded by the alphabet).
+- **Edge Case Missed on First Attempt**:
+  None recorded. Characters in `order` but absent from `s` are skipped via the `in h` check, and characters of `s` missing from `order` are still appended.
+
+---
+
 ## 💬 Discord Submission Command
 ```text
-/done day18 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/18-nov/problem_1_sort_characters_by_frequency.py <link_to_prob_2> <link_to_prob_3>
+/done day18 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/18-nov/problem_1_sort_characters_by_frequency.py <link_to_prob_2> https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/18-nov/problem_3_custom_sort_string.py
 ```
