@@ -29,7 +29,20 @@
 
 ---
 
+### Problem 3: Lexicographically Smallest Equivalent String
+> Note: the curriculum lists "Lexicographic Smaller String Comparison" for this slot; the submitted solution is for this problem instead.
+
+- **Solution File**: [`problem_3_lexicographically_smallest_equivalent_string.py`](./problem_3_lexicographically_smallest_equivalent_string.py)
+- **Approach**:
+  Union-Find over the 26 letters. For each pair `(s1[i], s2[i])`, union their sets, always making the smaller letter the root so the root is the lexicographically smallest member. Then map each character of `baseStr` to its root. Path compression is used in `find`. No libraries are used.
+- **Time Complexity**: `O((N + M) * alpha(26))`, effectively `O(N + M)` where `N = len(s1)` and `M = len(baseStr)`.
+- **Space Complexity**: `O(1)` for the 26-element parent array (plus `O(M)` for the result).
+- **Edge Case Missed on First Attempt**:
+  None recorded. Unioning by the smaller root keeps the smallest letter as representative, and letters in `baseStr` not in any pair map to themselves.
+
+---
+
 ## 💬 Discord Submission Command
 ```text
-/done day19 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/19-nov/problem_1_find_smallest_letter_greater_than_target.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/19-nov/problem_2_longest_word_in_dictionary_through_deleting.py <link_to_prob_3>
+/done day19 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/19-nov/problem_1_find_smallest_letter_greater_than_target.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/19-nov/problem_2_longest_word_in_dictionary_through_deleting.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/19-nov/problem_3_lexicographically_smallest_equivalent_string.py
 ```
