@@ -18,7 +18,18 @@
 
 ---
 
+### Problem 2: Longest Word in Dictionary Through Deleting
+- **Solution File**: [`problem_2_longest_word_in_dictionary_through_deleting.py`](./problem_2_longest_word_in_dictionary_through_deleting.py)
+- **Approach**:
+  Build a character-frequency hash map for `s`. For each dictionary word, build its own frequency map and check that `s` has at least that many of every character. Among valid words keep the longest, breaking ties by the lexicographically smaller word. No built-in sort or library is used.
+- **Time Complexity**: `O(|s| + sum of word lengths)`.
+- **Space Complexity**: `O(1)` (maps bounded by the alphabet size).
+- **Edge Case Missed on First Attempt**:
+  The frequency check ignores character order, so it accepts words that are not subsequences of `s` (e.g. `s = "ba"`, word `"ab"`). A two-pointer subsequence check per word is the correct validity test.
+
+---
+
 ## 💬 Discord Submission Command
 ```text
-/done day19 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/19-nov/problem_1_find_smallest_letter_greater_than_target.py <link_to_prob_2> <link_to_prob_3>
+/done day19 https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/19-nov/problem_1_find_smallest_letter_greater_than_target.py https://github.com/gameway-sn/DSA_ALPHA_300/blob/main/nov/week-3/19-nov/problem_2_longest_word_in_dictionary_through_deleting.py <link_to_prob_3>
 ```
